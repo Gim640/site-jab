@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jeanne d'Arc de Biarritz – Accueil</title>
+  <meta name="description" content="Site officiel – Jeanne d'Arc de Biarritz. Actualités du club, programme des matchs, résultats, boutique et contact." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bleu-marine:#2596be; /* couleur principale du club */
+      --blanc:#ffffff; --noir:#0b0b0f; --gris:#f4f6f8; --gris-txt:#5b616e;
+      --radius:14px;
+    }
+    html,body{margin:0;padding:0;background:var(--gris);color:var(--noir);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{background:var(--bleu-marine);color:var(--blanc)}
+    .container{max-width:1120px;margin:0 auto;padding:0 16px}
+    .brand{display:flex;align-items:center;gap:14px;padding:18px 0}
+    .logo{width:64px;height:64px;border-radius:12px;display:grid;place-items:center;background:var(--blanc);color:var(--bleu-marine);font-weight:800}
+    .brand h1{margin:0;font-size:1.25rem}
+    nav a{color:var(--blanc);text-decoration:none;margin-left:16px;font-weight:600}
+    nav a:hover{text-decoration:underline}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center;padding:18px 0 26px}
+    .hero h2{margin:6px 0 10px 0;color:var(--bleu-marine);font-size:2rem}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:0 12px 28px rgba(10,20,40,.06);padding:16px}
+    .cta{display:inline-block;background:var(--bleu-marine);color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    article{display:flex;flex-direction:column;gap:10px}
+    article img{width:100%;height:180px;object-fit:cover;border-radius:10px}
+    article h3{margin:0}
+    .meta{color:var(--gris-txt);font-size:.9rem}
+    footer{background:#0f1420;color:#dfe6f3;margin-top:32px}
+    .footer{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;padding:22px 0}
+    .f-block{background:#121827;border-radius:12px;padding:14px}
+    .f-title{margin:0 0 8px 0;font-size:1.05rem;color:#eaf2ff}
+    .contact a{color:#eaf2ff;text-decoration:none}
+    .contact a:hover{text-decoration:underline}
+    iframe.map{width:100%;height:260px;border:0;border-radius:10px}
+    @media (max-width:920px){.hero,.footer{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="logo">JAB</div>
+        <div>
+          <h1>Jeanne d'Arc de Biarritz</h1>
+          <div style="opacity:.9;font-size:.9rem">Club fondé en 1909 – Accueil</div>
+        </div>
+      </div>
+      <nav style="margin-left:auto">
+        <a href="/index.html">Accueil</a>
+        <a href="/programme.html">Programme/Résultats</a>
+        <a href="/boutique.html">Boutique</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="container hero">
+      <div class="card">
+        <h2>Bienvenue à la JAB</h2>
+        <p>Retrouvez chaque semaine l’actualité du club, le programme des rencontres et la boutique supporters (en <strong>précommande</strong> : production locale, broderie/sérigraphie).</p>
+        <p>
+          <a class="cta" href="#actus">Dernières actualités</a>
+          <a class="cta" href="/boutique.html" style="margin-left:8px">Découvrir la boutique</a>
+        </p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/800x420.png?text=Photo+%C3%A9quipe+JAB" alt="Photo équipe" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="actus">
+    <h2 style="color:var(--bleu-marine)">Dernières actualités</h2>
+    <div class="grid cols-3">
+      <article class="card">
+        <img src="https://via.placeholder.com/640x360.png?text=Match+phare+du+week-end" alt="Match phare">
+        <div class="meta">8 octobre 2025</div>
+        <h3>U13 – Derby : JAB vs XXX – le résumé et les buts</h3>
+        <p>Retour sur le match phare du week-end : temps forts, buteurs, réactions du coach et prochaines échéances.</p>
+        <a class="cta" href="#">Lire</a>
+      </article>
+
+      <article class="card">
+        <img src="https://via.placeholder.com/640x360.png?text=Ecole+de+foot" alt="Ecole de foot">
+        <div class="meta">5 octobre 2025</div>
+        <h3>Portes ouvertes – école de foot</h3>
+        <p>Séance découverte pour les 6–9 ans : horaires, inscription, équipement conseillé et encadrement.</p>
+        <a class="cta" href="#">Lire</a>
+      </article>
+
+      <article class="card">
+        <img src="https://via.placeholder.com/640x360.png?text=Boutique+supporters" alt="Boutique">
+        <div class="meta">1 octobre 2025</div>
+        <h3>Boutique supporters – précommandes ouvertes</h3>
+        <p>T-shirt, sweat, écharpe. Production locale avec broderie/sérigraphie : soutenez le club !</p>
+        <a class="cta" href="/boutique.html">Voir les produits</a>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer">
+      <div class="f-block contact">
+        <h4 class="f-title">Contact club</h4>
+        <p style="margin:0 0 6px 0">Jeanne d'Arc de Biarritz</p>
+        <p style="margin:0 0 6px 0">Rue Saint Martin, 64200 Biarritz</p>
+        <p style="margin:0 0 6px 0">📞 <a href="tel:+33600000000">06 00 00 00 00</a><br/>✉️ <a href="mailto:contact@jabiarritz.fr">contact@jabiarritz.fr</a></p>
+      </div>
+      <div class="f-block">
+        <h4 class="f-title">Plan d'accès</h4>
+        <iframe class="map" title="Plan d'accès" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.574%2C43.470%2C-1.535%2C43.495&amp;layer=mapnik&amp;marker=43.483%2C-1.558" loading="lazy"></iframe>
+        <div style="margin-top:6px;font-size:.9rem;opacity:.8">Rue Saint Martin, 64200 Biarritz</div>
+      </div>
+    </div>
+    <div class="container" style="padding:12px 0;color:#9fb0c9;font-size:.9rem">© 1909–2025 Jeanne d'Arc de Biarritz — Prototype statique • Mentions légales | RGPD</div>
+  </footer>
+</body>
+</html>
