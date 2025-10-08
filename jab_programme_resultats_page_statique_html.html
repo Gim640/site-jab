@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jeanne d'Arc de Biarritz – Programme & Résultats</title>
+  <meta name="description" content="Programme des matchs et résultats – Jeanne d'Arc de Biarritz (JAB). Match phare, recherche équipes, classements et calendriers.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bleu-marine:#2596be; /* couleur principale */
+      --blanc:#ffffff; --noir:#0b0b0f; --gris:#f4f6f8; --gris-txt:#5b616e; --radius:14px;
+    }
+    html,body{margin:0;padding:0;background:var(--gris);color:var(--noir);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{background:var(--bleu-marine);color:var(--blanc)}
+    .container{max-width:1120px;margin:0 auto;padding:0 16px}
+    .brand{display:flex;align-items:center;gap:14px;padding:18px 0}
+    .logo{width:64px;height:64px;border-radius:12px;display:grid;place-items:center;background:var(--blanc);color:var(--bleu-marine);font-weight:800}
+    .brand h1{margin:0;font-size:1.25rem}
+    nav a{color:var(--blanc);text-decoration:none;margin-left:16px;font-weight:600}
+    nav a:hover{text-decoration:underline}
+
+    .card{background:#fff;border-radius:var(--radius);box-shadow:0 12px 28px rgba(10,20,40,.06);padding:16px}
+    .section{padding:18px 0}
+    h2{color:var(--bleu-marine)}
+    .cta{display:inline-block;background:var(--bleu-marine);color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-weight:700}
+
+    .grid{display:grid;gap:16px}
+    .grid.cols-2{grid-template-columns:1.1fr .9fr}
+
+    /* Recherche interne (démo) */
+    .search-wrap{display:grid;grid-template-columns:320px 1fr;gap:14px}
+    .search-wrap select,.search-wrap input{width:100%;padding:10px;border-radius:10px;border:1px solid #d6dbe4;background:#fff}
+    .table{width:100%;border-collapse:separate;border-spacing:0 8px}
+    .row{display:grid;grid-template-columns:40px 1fr 60px 60px;gap:10px;align-items:center;background:#fff;margin:6px 0;border-radius:10px;padding:10px;box-shadow:0 4px 14px rgba(10,20,40,.04)}
+    .row .pos{font-weight:700;color:var(--bleu-marine);text-align:center}
+    .muted{color:var(--gris-txt);font-size:.92rem}
+
+    footer{background:#0f1420;color:#dfe6f3;margin-top:32px}
+    .footer{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;padding:22px 0}
+    .f-block{background:#121827;border-radius:12px;padding:14px}
+    .f-title{margin:0 0 8px 0;font-size:1.05rem;color:#eaf2ff}
+    .contact a{color:#eaf2ff;text-decoration:none}
+    .contact a:hover{text-decoration:underline}
+    iframe.map{width:100%;height:260px;border:0;border-radius:10px}
+
+    @media (max-width:980px){
+      .grid.cols-2{grid-template-columns:1fr}
+      .search-wrap{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="logo">JAB</div>
+        <div>
+          <h1>Jeanne d'Arc de Biarritz</h1>
+          <div style="opacity:.9;font-size:.9rem">Programme & Résultats</div>
+        </div>
+      </div>
+      <nav style="margin-left:auto">
+        <a href="/index.html">Accueil</a>
+        <a href="/programme.html">Programme/Résultats</a>
+        <a href="/boutique.html">Boutique</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 1) Bloc Actu importante -->
+    <section class="section">
+      <div class="card grid cols-2" style="align-items:center">
+        <div>
+          <h2>Actu importante</h2>
+          <p class="muted">Mettez en avant l'information clé du moment : match phare, tournoi, portes ouvertes, réunion du club, etc.</p>
+          <p><a class="cta" href="#" id="link-actu">Lire l'article</a></p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/800x420.png?text=Actu+importante" alt="Actu importante" style="width:100%;height:100%;object-fit:cover;border-radius:12px">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) Accès FFF ou Recherche interne -->
+    <section class="section">
+      <div class="card">
+        <h2>Classements & Matchs</h2>
+        <p>Choisissez une option :</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 18px 0">
+          <a class="cta" href="https://www.fff.fr/" target="_blank" rel="noopener">Consulter sur FFF.fr</a>
+          <a class="cta" href="#recherche" onclick="document.getElementById('recherche').scrollIntoView({behavior:'smooth'})">Recherche interne (démo)</a>
+        </div>
+
+        <!-- Recherche interne démo (100% statique, remplaçable par une source future) -->
+        <div id="recherche" class="search-wrap">
+          <div class="card" style="padding:12px">
+            <h3 style="margin-top:0">Trouver une équipe JAB</h3>
+            <label class="muted" for="select-team">Équipe</label>
+            <select id="select-team">
+              <option value="">— Sélectionner —</option>
+              <option value="U13 A">U13 A</option>
+              <option value="U13 B">U13 B</option>
+              <option value="U15">U15</option>
+              <option value="Seniors A">Seniors A</option>
+              <option value="Seniors B">Seniors B</option>
+            </select>
+            <div style="height:10px"></div>
+            <label class="muted" for="select-saison">Saison</label>
+            <select id="select-saison">
+              <option>2025/2026</option>
+              <option>2024/2025</option>
+            </select>
+            <div style="height:12px"></div>
+            <button class="cta" id="btn-load" type="button">Afficher</button>
+          </div>
+
+          <div>
+            <!-- Résumé équipe -->
+            <div id="team-summary" class="card" style="display:none">
+              <h3 id="team-name" style="margin:0 0 6px 0"></h3>
+              <div class="muted" id="team-meta"></div>
+            </div>
+            <div style="height:10px"></div>
+            <!-- Classement -->
+            <div id="ranking" class="card" style="display:none">
+              <h3 style="margin:0 0 8px 0">Classement (démo)</h3>
+              <div id="ranking-rows"></div>
+            </div>
+            <div style="height:10px"></div>
+            <!-- Calendrier -->
+            <div id="fixtures" class="card" style="display:none">
+              <h3 style="margin:0 0 8px 0">Matchs à venir / passés (démo)</h3>
+              <div id="fixtures-rows"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer">
+      <div class="f-block contact">
+        <h4 class="f-title">Contact club</h4>
+        <p style="margin:0 0 6px 0">Jeanne d'Arc de Biarritz</p>
+        <p style="margin:0 0 6px 0">Rue Saint Martin, 64200 Biarritz</p>
+        <p style="margin:0 0 6px 0">📞 <a href="tel:+33600000000">06 00 00 00 00</a><br/>✉️ <a href="mailto:contact@jabiarritz.fr">contact@jabiarritz.fr</a></p>
+      </div>
+      <div class="f-block">
+        <h4 class="f-title">Plan d'accès</h4>
+        <iframe class="map" title="Plan d'accès" src="https://www.openstreetmap.org/export/embed.html?bbox=-1.574%2C43.470%2C-1.535%2C43.495&amp;layer=mapnik&amp;marker=43.483%2C-1.558" loading="lazy"></iframe>
+        <div style="margin-top:6px;font-size:.9rem;opacity:.8">Rue Saint Martin, 64200 Biarritz</div>
+      </div>
+    </div>
+    <div class="container" style="padding:12px 0;color:#9fb0c9;font-size:.9rem">© 1909–2025 Jeanne d'Arc de Biarritz — Prototype statique • Mentions légales | RGPD</div>
+  </footer>
+
+  <script>
+    // Jeu de données démo (remplaçable par appel API plus tard)
+    const DATA = {
+      "U13 A": {
+        meta: "District 64 – D1 Jeunes",
+        ranking: [
+          {pos:1, team:"JAB U13 A", pts:18, diff:+14},
+          {pos:2, team:"AS Adverse 1", pts:16, diff:+9},
+          {pos:3, team:"US Adverse 2", pts:12, diff:+3}
+        ],
+        fixtures: [
+          {date:"Sam 12/10", time:"10:30", vs:"@ AS Adverse 1", res:"à venir"},
+          {date:"Sam 05/10", time:"10:30", vs:"vs US Adverse 2", res:"3–1"},
+          {date:"Sam 28/09", time:"10:30", vs:"@ FC Côte Basque", res:"2–2"}
+        ]
+      },
+      "U13 B": {
+        meta: "District 64 – D3 Jeunes",
+        ranking: [
+          {pos:1, team:"FC Côte Basque", pts:15, diff:+8},
+          {pos:2, team:"JAB U13 B", pts:13, diff:+5},
+          {pos:3, team:"AS Adverse 3", pts:9, diff:+1}
+        ],
+        fixtures: [
+          {date:"Sam 12/10", time:"09:00", vs:"vs FC Côte Basque", res:"à venir"},
+          {date:"Sam 05/10", time:"09:00", vs:"@ AS Adverse 3", res:"1–0"}
+        ]
+      },
+      "U15": {
+        meta: "District 64 – D2 Jeunes",
+        ranking: [
+          {pos:1, team:"AS Adverse U15", pts:19, diff:+16},
+          {pos:2, team:"JAB U15", pts:17, diff:+11},
+          {pos:3, team:"US Adverse U15", pts:10, diff:-2}
+        ],
+        fixtures: [
+          {date:"Dim 13/10", time:"11:00", vs:"vs US Adverse U15", res:"à venir"},
+          {date:"Dim 06/10", time:"11:00", vs:"@ AS Adverse U15", res:"2–0"}
+        ]
+      },
+      "Seniors A": {
+        meta: "District 64 – D1 Seniors",
+        ranking: [
+          {pos:1, team:"JAB Seniors A", pts:22, diff:+13},
+          {pos:2, team:"AS Adverse Senior", pts:20, diff:+10},
+          {pos:3, team:"US Côte Basque", pts:18, diff:+6}
+        ],
+        fixtures: [
+          {date:"Sam 12/10", time:"18:00", vs:"vs US Côte Basque", res:"à venir"},
+          {date:"Sam 05/10", time:"18:00", vs:"@ AS Adverse Senior", res:"1–1"}
+        ]
+      },
+      "Seniors B": {
+        meta: "District 64 – D3 Seniors",
+        ranking: [
+          {pos:1, team:"AS Adverse Réserve", pts:21, diff:+12},
+          {pos:2, team:"JAB Seniors B", pts:19, diff:+9},
+          {pos:3, team:"US Adverse B", pts:15, diff:+4}
+        ],
+        fixtures: [
+          {date:"Dim 13/10", time:"15:00", vs:"@ US Adverse B", res:"à venir"},
+          {date:"Dim 06/10", time:"15:00", vs:"vs AS Adverse Réserve", res:"2–2"}
+        ]
+      }
+    };
+
+    const elSel = document.getElementById('select-team');
+    const elSaison = document.getElementById('select-saison');
+    const elBtn = document.getElementById('btn-load');
+    const elSummary = document.getElementById('team-summary');
+    const elName = document.getElementById('team-name');
+    const elMeta = document.getElementById('team-meta');
+    const elRank = document.getElementById('ranking');
+    const elRankRows = document.getElementById('ranking-rows');
+    const elFix = document.getElementById('fixtures');
+    const elFixRows = document.getElementById('fixtures-rows');
+
+    elBtn.addEventListener('click', () => {
+      const t = elSel.value;
+      if(!t || !DATA[t]){ alert('Sélectionnez une équipe.'); return; }
+      const d = DATA[t];
+      // résumé
+      elSummary.style.display='block';
+      elName.textContent = t;
+      elMeta.textContent = d.meta + ' • Saison ' + elSaison.value;
+      // ranking
+      elRank.style.display='block';
+      elRankRows.innerHTML = d.ranking.map(r => (
+        `<div class="row"><div class="pos">${r.pos}</div><div>${r.team}</div><div>${r.pts} pts</div><div>${r.diff>0? "+"+r.diff: r.diff}</div></div>`
+      )).join('');
+      // fixtures
+      elFix.style.display='block';
+      elFixRows.innerHTML = d.fixtures.map(f => (
+        `<div class="row" style="grid-template-columns:90px 70px 1fr 110px"><div class="pos">${f.date}</div><div>${f.time}</div><div>${f.vs}</div><div>${f.res}</div></div>`
+      )).join('');
+    });
+  </script>
+</body>
+</html>
